@@ -47,12 +47,10 @@ Para aprovechar al máximo la computación paralela, se han desarrollado lenguaj
 
 ### Ventajas
 
-- Resuelve problemas que no se podrían realizar en una sola CPU
-- Resuelve problemas que no se pueden resolver en un tiempo razonable
+- Resuelve problemas que no se podrían realizar en una sola CPU y resolver en un tiempo razonable
 - Permite ejecutar problemas de gran escala, más complejos y en menor tiempo.
 - Obtención de resultados en menos tiempo
-- Permite la ejecución de varias instrucciones en simultáneo
-- Permite dividir una tarea en partes independientes
+- Permite la ejecución de varias instrucciones en simultáneo y dividir una tarea en partes independientes
 - Ofrece mejor balance entre rendimiento y costo que la computación secuencial
 - Gran expansión y escalabilidad
 
