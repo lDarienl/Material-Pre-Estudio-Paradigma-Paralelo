@@ -18,4 +18,15 @@ Para soportar las cargas de trabajo paralelas, se han diseñado procesadores mul
 
 ## Ventajas
 
+- Resuelve problemas que no se podrían realizar en una sola CPU
+- Resuelve problemas que no se pueden resolver en un tiempo razonable
+- Permite ejecutar problemas de un orden y complejidad mayor
+- Permite ejecutar código de manera más rápida (aceleración)
+- Permite ejecutar en general más problemas
+- Obtención de resultados en menos tiempo
+- Permite la ejecución de varias instrucciones en simultáneo
+- Permite dividir una tarea en partes independientes
+- Ofrece mejor balance entre rendimiento y costo que la computación secuencial
+- Gran expansión y escalabilidad
+
 Link to the sample section: [Link Text](#¿por-que-es-un-paradigma?).
