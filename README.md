@@ -43,9 +43,13 @@ Para soportar las cargas de trabajo paralelas, se han diseñado procesadores mul
 
 ## Podemos desglosar este paradigma para entenderlo mejor:
 **Problema:** El problema es aquello que queremos resolver, la tarea inicial a la cual queremos darle una solución.
+
 **Tareas:** Las tareas son aquellas en las que descomponemos el problema, es decir, las partes en las que vamos a dividirlo para darle una solución más rápida y efectiva. Estas están compuestas por un conjunto de instrucciones que luego serán interpretadas y ejecutadas por un procesador.
+
 **Granularidad:** Es el tamaño de nuestro problema y sus tareas, esta dividida en dos tipos de granularidad, las gruesas y finas.
+
 **Granularidad Gruesa:** Es una cantidad grande de trabajo en extensión, tiene alta independencia entre sus tareas. Una granularidad gruesa esta conformada por el problema inicial y pocas tareas (1,2,3), pero cada tarea es complicada y al juntarlas resuelven el problema inicial con facilidad.
+
 **Granularidad fina:** son cantidades pequeñas de trabajo, pero están divididas en muchas tareas (5,6,7), lo cual significa que para un problema inicial pueden salir bastantes tareas, al ser de esta forma es necesaria una mayor dependencia de unas con otras, normalmente al unirlas todas, primero se resuelven problemas entre las tareas y al finalizar si se resuelve el problema inicial.
 
 ```python
