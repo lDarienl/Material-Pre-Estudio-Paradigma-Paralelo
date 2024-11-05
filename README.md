@@ -29,4 +29,4 @@ Para soportar las cargas de trabajo paralelas, se han diseñado procesadores mul
 - Ofrece mejor balance entre rendimiento y costo que la computación secuencial
 - Gran expansión y escalabilidad
 
-Link to the sample section: [Link Text](#¿por-que-es-un-paradigma?).
+
