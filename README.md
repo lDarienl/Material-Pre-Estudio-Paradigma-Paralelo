@@ -1,6 +1,18 @@
-[Texto del enlace](#desventajas)
+# Índice
+* [**Introducción**](#introducción)
+* [**Conceptos**](#conceptos)
+* [**¿Por qué es un paradigma?**](#por-qué-es-un-paradigma)
+* [**Ventajas y Desventajas**](#ventajas-y-desventajas)
+  * [**Ventajas**](#ventajas)
+  * [**Desventajas**](#desventajas)
+* [**Podemos desglosar este paradigma para entenderlo mejor:**](#podemos-desglosar-este-paradigma-para-entenderlo-mejor)
+* [**Ejemplos en Codigo**](#ejemplos-en-codigo)
+  * [**Python**](#python)
+  * [**C++**](#c-con-openmp)
 
-# Material Pre-Estudio Paradigma Paralelo
+
+
+# Introducción
 Estos son unos recursos en el cual puede aprender lo principal o estudiar mas afondo sobre el paradigma paralelo que hablaremos el dia miercoles 11/4/2024
 
 ## Conceptos
@@ -54,6 +66,10 @@ Para soportar las cargas de trabajo paralelas, se han diseñado procesadores mul
 
 **Granularidad fina:** son cantidades pequeñas de trabajo, pero están divididas en muchas tareas (5,6,7), lo cual significa que para un problema inicial pueden salir bastantes tareas, al ser de esta forma es necesaria una mayor dependencia de unas con otras, normalmente al unirlas todas, primero se resuelven problemas entre las tareas y al finalizar si se resuelve el problema inicial.
 
+## Ejemplos en Codigo
+
+### Python
+
 ```python
 import multiprocessing
 import time
@@ -80,3 +96,53 @@ if __name__ == '__main__':
 
     print("Tiempo de ejecución:", time.time() - start_time)
 ```
+**Explicación:**
+
+1. Dividir la lista: Se divide la lista de números en fragmentos iguales para que cada proceso trabaje en una parte.
+2. Crear procesos: Se crea un pool de procesos con el número especificado.
+3. Aplicar la función en paralelo: Se utiliza pool.map para aplicar la función calcular_cuadrado a cada fragmento en paralelo.
+4. Combinar resultados: Se combinan los resultados de todos los procesos en una única lista.
+
+### C++ con OpenMP
+```c++
+#include <iostream>
+#include <omp.h>
+
+int main() {
+    const int N = 1000000;
+    int arr[N];
+
+    // Inicializar el arreglo
+    for (int i = 0; i < N; ++i) {
+        arr[i] = i;
+    }
+
+    int suma = 0;
+
+    // Ejecución secuencial
+    double start_time = omp_get_wtime();
+    for (int i = 0; i < N; ++i) {
+        suma += arr[i];
+    }
+    double end_time = omp_get_wtime();
+    std::cout << "Suma secuencial: " << suma << " Tiempo: " << end_time - start_time << std::endl;
+
+    // Ejecución paralela
+    suma = 0;
+    start_time = omp_get_wtime();
+    #pragma omp parallel for reduction(+:suma)
+    for (int i = 0; i < N; ++i) {
+        suma += arr[i];
+    }
+    end_time = omp_get_wtime();
+    std::cout << "Suma paralela: " << suma << " Tiempo: " << end_time - start_time << std::endl;
+
+    return 0;
+}
+```
+
+**Explicación:**
+
+1. Directiva #pragma omp parallel for: Esta directiva indica al compilador que el bucle for debe ejecutarse en paralelo en múltiples hilos.
+2. Reducción (+:suma): La cláusula reduction(+:suma) garantiza que todas las contribuciones parciales a la variable suma se sumen correctamente al final.
+
