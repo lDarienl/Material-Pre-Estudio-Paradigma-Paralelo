@@ -127,12 +127,15 @@ if __name__ == '__main__':
 ### C++ con OpenMP
 
 **¿Qué es OpenMP?**
+
 OpenMP (Open Multi-Processing) es una API (Interfaz de Programación de Aplicaciones) que proporciona una forma sencilla y portátil de añadir paralelismo a programas C++ y Fortran. Permite a los programadores aprovechar la potencia de múltiples procesadores o núcleos en un sistema, sin la necesidad de escribir código altamente especializado.
 
 **La biblioteca omp.h**
+
 La biblioteca omp.h es la cabecera que debes incluir en tu código C++ para utilizar las directivas y funciones de OpenMP. Esta biblioteca proporciona una interfaz estándar para la programación paralela, lo que facilita la portabilidad de los programas a diferentes plataformas que soporten OpenMP.
 
 **¿Cómo funciona OpenMP?**
+
 OpenMP utiliza directivas que se añaden al código fuente para indicar al compilador cómo paralelizar ciertas secciones del programa. Estas directivas suelen empezar con #pragma omp.
 
 
