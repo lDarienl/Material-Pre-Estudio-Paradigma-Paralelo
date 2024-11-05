@@ -1,5 +1,6 @@
 # Índice
 * [**Introducción**](#introducción)
+   * [**Relación entre el paradigma paralelo y la computación paralela**](#relación-entre-el-paradigma-paralelo-y-la-computación-paralela)
 * [**Conceptos**](#conceptos)
 * [**¿Por qué es un paradigma?**](#por-qué-es-un-paradigma)
 * [**Ventajas y Desventajas**](#ventajas-y-desventajas)
@@ -9,26 +10,38 @@
 * [**Ejemplos en Codigo**](#ejemplos-en-codigo)
   * [**Python**](#python)
   * [**C++**](#c-con-openmp)
+* [**Anexos y Bibliografias**](#anexos-y-bibliografias)
 
 
 
 # Introducción
-Estos son unos recursos en el cual puede aprender lo principal o estudiar mas afondo sobre el paradigma paralelo que hablaremos el dia miercoles 11/4/2024
+Estos son recursos con los que pueden aprender lo básico o estudiar más a fondo sobre el paradigma paralelo, que trataremos el día miércoles 11/4/2024.
+
+> [!TIP]
+> Este paradigma no solo es útil en áreas de alto procesamiento, sino también en aplicaciones comunes como redes sociales y videojuegos, donde mejorar la eficiencia es clave.
+
+## Relación entre el paradigma paralelo y la computación paralela
+Mientras que el paradigma paralelo es una estrategia de diseño y programación que describe cómo dividir y resolver tareas simultáneamente, la computación paralela es la implementación práctica de ese paradigma, que ocurre en sistemas de hardware y software que permiten la ejecución simultánea de varias tareas. En otras palabras:
+
+- El paradigma paralelo es el conjunto de principios y técnicas que guían el diseño de software paralelo.
+- La computación paralela es la práctica de usar múltiples procesadores o núcleos para resolver un problema mediante los principios del paradigma paralelo.
 
 ## Conceptos
 
-El paralelismo es una técnica de computación que busca dividir un problema grande en problemas más pequeños que pueden resolverse al mismo tiempo, permitiendo ejecutar más instrucciones en menos tiempo. Es fundamental en áreas que requieren un alto procesamiento y memoria, como las simulacion científicas y la generación de gráficos computacionales.
-La esencia de la computación paralela reside en una premisa sencilla pero poderosa: dividir un problema grande en subproblemas más pequeños y resolverlos simultáneamente. Esta estrategia, conocida como "divide y vencerás", permite acelerar significativamente el proceso de cálculo, ya que múltiples procesadores o núcleos trabajan de forma coordinada en diferentes partes del problema. Pero estamos hablando de la computacion y no un paradigma, ¿Por qué es un paradigma?
+El paralelismo es una técnica de computación que busca dividir un problema grande en problemas más pequeños que pueden resolverse al mismo tiempo, permitiendo ejecutar más instrucciones en menos tiempo. Es fundamental en áreas que requieren un alto procesamiento y memoria, como las simulación científicas y la generación de gráficos computacionales.
+La esencia de la computación paralela reside en una premisa sencilla pero poderosa: dividir un problema grande en subproblemas más pequeños y resolverlos simultáneamente. 
+>[!NOTE]
+>Esta estrategia, conocida como "divide y vencerás", permite acelerar significativamente el proceso de cálculo, ya que múltiples procesadores o núcleos trabajan de forma coordinada en diferentes partes del problema.
 
 ## ¿Por qué es un paradigma?
 
-Un paradigma es un modelo o conjunto de conceptos, teorías, prácticas y métodos que definen una visión del mundo y una forma de abordarlo. En otras palabras, es una especie de lente a través del cual vemos y entendemos la realidad. Los paradigmas son fundamentales en cualquier disciplina, ya que guían la investigación, la enseñanza y la resolución de problemas.
-El hecho de que la programación paralela sea un paradigma se debe a que ha transformado la manera en que abordamos los problemas computacionales, impulsando el desarrollo de nuevas herramientas, técnicas y hardware. Este cambio de paradigma ha permitido resolver problemas antes inabordables y ha abierto nuevas posibilidades en diversos campos de la ciencia y la tecnología, esto también nos demuestra que existe una razón por la cual no ha dejado de ser necesaria.
+Un **paradigma** es una perspectiva que reúne conceptos, teorías y prácticas para abordar problemas y guiar la investigación. En otras palabras, es una especie de lente a través del cual vemos y entendemos la realidad. Los paradigmas son fundamentales en cualquier disciplina, ya que guían la investigación, la enseñanza y la resolución de problemas.
+La programación paralela es un paradigma porque ha transformado cómo abordamos problemas computacionales, impulsando nuevas herramientas, técnicas y hardware.
 
-Ha dado lugar a nuevas herramientas y técnicas de programación:
-Para aprovechar al máximo el potencial de la computación paralela, se han desarrollado lenguajes de programación específicos, bibliotecas y frameworks que facilitan la escritura de programas paralelos. Además, han surgido nuevas técnicas de programación como la programación concurrente y la programación distribuida.
-Ha impulsado el desarrollo de nuevas arquitecturas de hardware:
-Para soportar las cargas de trabajo paralelas, se han diseñado procesadores multinúcleo, sistemas multiprocesador y aceleradores como las GPUs. Estas nuevas arquitecturas permiten ejecutar múltiples hilos de ejecución de forma simultánea y mejorar el rendimiento de las aplicaciones paralelas.
+>[!TIP]
+>Este cambio de paradigma requiere un cambio en la forma de pensar en comparación con paradigmas secuenciales.
+
+Para aprovechar al máximo la computación paralela, se han desarrollado lenguajes, bibliotecas y frameworks específicos, además de arquitecturas de hardware avanzadas como procesadores multinúcleo y GPUs.
 
 ## Ventajas y desventajas:
 
@@ -36,24 +49,27 @@ Para soportar las cargas de trabajo paralelas, se han diseñado procesadores mul
 
 - Resuelve problemas que no se podrían realizar en una sola CPU
 - Resuelve problemas que no se pueden resolver en un tiempo razonable
-- Permite ejecutar problemas de un orden y complejidad mayor
-- Permite ejecutar código de manera más rápida (aceleración)
-- Permite ejecutar en general más problemas
+- Permite ejecutar problemas de gran escala, más complejos y en menor tiempo.
 - Obtención de resultados en menos tiempo
 - Permite la ejecución de varias instrucciones en simultáneo
 - Permite dividir una tarea en partes independientes
 - Ofrece mejor balance entre rendimiento y costo que la computación secuencial
 - Gran expansión y escalabilidad
 
+>[!NOTE]
+>La computación paralela permite ejecutar instrucciones simultáneamente, lo cual es ideal para problemas complejos y de gran escala.
+
 ### Desventajas
 
-- Mayor consumo de energía
-- Mayor dificultad a la hora de escribir programas
+- Mayor consumo de energía y complejidad en la escritura de programas.
 - Dificultad para lograr una buena sincronización y comunicación entre las tareas
 - Retardos ocasionados por comunicación ente tareas
 - Número de componentes usados es directamente proporcional a los fallos potenciales
 - Altos costos por producción y mantenimiento
 - Condiciones de carrera
+
+>[!CAUTION]
+>El costo de comunicación entre tareas puede consumir tiempo y recursos, y el debugging en paralelo puede ser más complejo que en código secuencial.
 
 ## Podemos desglosar este paradigma para entenderlo mejor:
 **Problema:** El problema es aquello que queremos resolver, la tarea inicial a la cual queremos darle una solución.
@@ -62,9 +78,9 @@ Para soportar las cargas de trabajo paralelas, se han diseñado procesadores mul
 
 **Granularidad:** Es el tamaño de nuestro problema y sus tareas, esta dividida en dos tipos de granularidad, las gruesas y finas.
 
-**Granularidad Gruesa:** Es una cantidad grande de trabajo en extensión, tiene alta independencia entre sus tareas. Una granularidad gruesa esta conformada por el problema inicial y pocas tareas (1,2,3), pero cada tarea es complicada y al juntarlas resuelven el problema inicial con facilidad.
+**Granularidad Gruesa:** La granularidad gruesa implica pocas tareas independientes de gran complejidad que, al unirse, resuelven el problema original.
 
-**Granularidad fina:** son cantidades pequeñas de trabajo, pero están divididas en muchas tareas (5,6,7), lo cual significa que para un problema inicial pueden salir bastantes tareas, al ser de esta forma es necesaria una mayor dependencia de unas con otras, normalmente al unirlas todas, primero se resuelven problemas entre las tareas y al finalizar si se resuelve el problema inicial.
+**Granularidad fina:** La granularidad fina involucra numerosas tareas pequeñas que dependen entre sí, resolviendo el problema inicial en conjunto.
 
 ## Ejemplos en Codigo
 
@@ -84,6 +100,9 @@ if __name__ == '__main__':
     numeros = list(range(1000000))
     num_procesos = 4
 
+    # Iniciar el tiempo de ejecución
+    start_time = time.time()
+
     # Dividir la lista en fragmentos
     fragmentos = [numeros[i:i + len(numeros) // num_procesos] for i in range(0, len(numeros), len(numeros) // num_procesos)]
 
@@ -96,6 +115,10 @@ if __name__ == '__main__':
 
     print("Tiempo de ejecución:", time.time() - start_time)
 ```
+
+>[!NOTE]
+>La variable start_time ahora captura el tiempo al inicio para medir la duración completa del proceso.
+
 **Explicación:**
 
 1. Dividir la lista: Se divide la lista de números en fragmentos iguales para que cada proceso trabaje en una parte.
@@ -104,9 +127,21 @@ if __name__ == '__main__':
 4. Combinar resultados: Se combinan los resultados de todos los procesos en una única lista.
 
 ### C++ con OpenMP
+
+**¿Qué es OpenMP?**
+OpenMP (Open Multi-Processing) es una API (Interfaz de Programación de Aplicaciones) que proporciona una forma sencilla y portátil de añadir paralelismo a programas C++ y Fortran. Permite a los programadores aprovechar la potencia de múltiples procesadores o núcleos en un sistema, sin la necesidad de escribir código altamente especializado.
+
+**La biblioteca omp.h**
+La biblioteca omp.h es la cabecera que debes incluir en tu código C++ para utilizar las directivas y funciones de OpenMP. Esta biblioteca proporciona una interfaz estándar para la programación paralela, lo que facilita la portabilidad de los programas a diferentes plataformas que soporten OpenMP.
+
+**¿Cómo funciona OpenMP?**
+OpenMP utiliza directivas que se añaden al código fuente para indicar al compilador cómo paralelizar ciertas secciones del programa. Estas directivas suelen empezar con #pragma omp.
+
+
+
 ```c++
 #include <iostream>
-#include <omp.h>
+#include <omp.h> // Biblioteca para OpenMP
 
 int main() {
     const int N = 1000000;
@@ -130,7 +165,7 @@ int main() {
     // Ejecución paralela
     suma = 0;
     start_time = omp_get_wtime();
-    #pragma omp parallel for reduction(+:suma)
+    #pragma omp parallel for ejecuta el bucle en múltiples hilos. 2. La reducción reduction(+:suma) asegura que los valores parciales de suma se sumen correctamente."
     for (int i = 0; i < N; ++i) {
         suma += arr[i];
     }
@@ -141,8 +176,28 @@ int main() {
 }
 ```
 
+>[!IMPORTANT]
+>Asegúrate de habilitar OpenMP en el compilador y usar #include <omp.h> para el correcto funcionamiento de la paralelización.
+
 **Explicación:**
 
 1. Directiva #pragma omp parallel for: Esta directiva indica al compilador que el bucle for debe ejecutarse en paralelo en múltiples hilos.
 2. Reducción (+:suma): La cláusula reduction(+:suma) garantiza que todas las contribuciones parciales a la variable suma se sumen correctamente al final.
 
+**Ventajas de usar OpenMP**
+- **Sencillez:** Permite añadir paralelismo a código secuencial existente con relativamente pocas modificaciones.
+- **Portabilidad:** Los programas OpenMP pueden compilarse en diferentes plataformas que soporten OpenMP.
+- **Flexibilidad:** Ofrece una amplia gama de directivas para controlar el paralelismo, la sincronización y la distribución de tareas.
+- **Eficiencia:** Puede proporcionar una aceleración significativa en aplicaciones que son intensivas en cálculo.
+
+**¿Para qué sirve OpenMP?**
+OpenMP es ideal para paralelizar bucles, secciones críticas y tareas que pueden dividirse en partes independientes. Es ampliamente utilizado en aplicaciones científicas, de ingeniería y de procesamiento de datos, donde el rendimiento es crítico.
+
+## Anexos y Bibliografias
+
+- [**Aprender C++ Basico**](https://learnxinyminutes.com/docs/es-es/c++-es/)
+- [**Aprender Python Basico**](https://learnxinyminutes.com/docs/es-es/python-es/)
+- [**Programación Paralela**](https://ferestrepoca.github.io/paradigmas-de-programacion/paralela/paralela_teoria/index.html#two)
+- [**Introduction to Parallel Computing Tutorial**](https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial)
+- [**Algoritmos Paralelos**](https://informatica.uv.es/iiguia/ALP/materiales/1_1_a_ComputacionParalela.pdf)
+- [**Multitarea e Hilos en Java con ejemplos**](https://jarroba.com/multitarea-e-hilos-en-java-con-ejemplos-thread-runnable/)
