@@ -17,6 +17,8 @@
 # Introducción
 Estos son recursos con los que pueden aprender lo básico o estudiar más a fondo sobre el paradigma paralelo, que trataremos el día miércoles 11/6/2024.
 
+**Equipo** @samuelleyton2006 @
+
 > [!TIP]
 > Este paradigma no solo es útil en áreas de alto procesamiento, sino también en aplicaciones comunes como redes sociales y videojuegos, donde mejorar la eficiencia es clave.
 
